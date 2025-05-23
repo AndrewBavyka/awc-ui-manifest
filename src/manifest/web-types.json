@@ -1,0 +1,194 @@
+{
+    "$schema": "http://json.schemastore.org/web-types",
+    "name": "awc-ui",
+    "version": "0.0.0",
+    "framework": "lit",
+    "contributions": {
+        "html": {
+            "elements": [
+                {
+                    "name": "my-element",
+                    "source": {
+                        "module": "./../components/my-element.ts",
+                        "symbol": "MyElement"
+                    },
+                    "attributes": [
+                        {
+                            "name": "variant",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "ElementVariantType",
+                                "required": true,
+                                "default": "\"primary\""
+                            },
+                            "description": "Вариант кнопки (простой union тип)",
+                            "source": {
+                                "module": "./../components/my-element.ts",
+                                "symbol": "MyElement.variant"
+                            }
+                        },
+                        {
+                            "name": "size",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "ElementSizeEnum",
+                                "required": true,
+                                "default": "\"medium\""
+                            },
+                            "description": "Размер элемента (используется enum)",
+                            "source": {
+                                "module": "./../components/my-element.ts",
+                                "symbol": "MyElement.size"
+                            }
+                        },
+                        {
+                            "name": "color",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "kind": "plain",
+                                "type": "\"blue\" | \"red\" | \"green\" | \"gray\"",
+                                "required": true,
+                                "default": "\"blue\""
+                            },
+                            "description": "Цвет элемента (тип из массива as const)",
+                            "source": {
+                                "module": "./../components/my-element.ts",
+                                "symbol": "MyElement.color"
+                            }
+                        },
+                        {
+                            "name": "tags",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "string[]",
+                                "required": true,
+                                "default": "[]"
+                            },
+                            "description": "Список тегов (массив строк)",
+                            "source": {
+                                "module": "./../components/my-element.ts",
+                                "symbol": "MyElement.tags"
+                            }
+                        },
+                        {
+                            "name": "config",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "{ enabled: boolean; level: number; }",
+                                "required": false,
+                                "default": "{\"enabled\":true,\"level\":1}"
+                            },
+                            "description": "Конфигурация элемента (объект)",
+                            "source": {
+                                "module": "./../components/my-element.ts",
+                                "symbol": "MyElement.config"
+                            }
+                        }
+                    ],
+                    "js": {
+                        "properties": [
+                            {
+                                "name": "variant",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "ElementVariantType",
+                                    "required": true,
+                                    "default": "\"primary\""
+                                },
+                                "description": "Вариант кнопки (простой union тип)",
+                                "source": {
+                                    "module": "./../components/my-element.ts",
+                                    "symbol": "MyElement.variant"
+                                }
+                            },
+                            {
+                                "name": "size",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "ElementSizeEnum",
+                                    "required": true,
+                                    "default": "\"medium\""
+                                },
+                                "description": "Размер элемента (используется enum)",
+                                "source": {
+                                    "module": "./../components/my-element.ts",
+                                    "symbol": "MyElement.size"
+                                }
+                            },
+                            {
+                                "name": "color",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "kind": "plain",
+                                    "type": "\"blue\" | \"red\" | \"green\" | \"gray\"",
+                                    "required": true,
+                                    "default": "\"blue\""
+                                },
+                                "description": "Цвет элемента (тип из массива as const)",
+                                "source": {
+                                    "module": "./../components/my-element.ts",
+                                    "symbol": "MyElement.color"
+                                }
+                            },
+                            {
+                                "name": "tags",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "string[]",
+                                    "required": true,
+                                    "default": "[]"
+                                },
+                                "description": "Список тегов (массив строк)",
+                                "source": {
+                                    "module": "./../components/my-element.ts",
+                                    "symbol": "MyElement.tags"
+                                }
+                            },
+                            {
+                                "name": "config",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "{ enabled: boolean; level: number; }",
+                                    "required": false,
+                                    "default": "{\"enabled\":true,\"level\":1}"
+                                },
+                                "description": "Конфигурация элемента (объект)",
+                                "source": {
+                                    "module": "./../components/my-element.ts",
+                                    "symbol": "MyElement.config"
+                                }
+                            },
+                            {
+                                "name": "styles",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "CSSResult",
+                                    "required": true,
+                                    "default": "\"css`\\n    :host {\\n      display: block;\\n    }\\n  `\""
+                                },
+                                "source": {
+                                    "module": "./../components/my-element.ts",
+                                    "symbol": "MyElement.styles"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "css": {
+            "properties": []
+        }
+    }
+}

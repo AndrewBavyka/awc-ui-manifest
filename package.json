@@ -1,0 +1,35 @@
+{
+  "name": "awc-ui-manifest",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "analyze": "npm run analyze:json && npm run analyze:markdown && npm run analyze:vscode && npm run analyze:webtypes",
+    "analyze:json": "npx wca analyze \"src/components/**/!(*.test|*.style).ts\" --format json2 --outFile src/manifest/custom-elements.json",
+    "analyze:markdown": "npx wca analyze  \"src/components/**/!(*.test|*.style).ts\" --format markdown --outFiles src/manifest/{filename}.md",
+    "analyze:vscode": "npx wca analyze \"src/components/**/!(*.test|*.style).ts\" --format vscode --outFile src/manifest/vscode-html-custom-data.json",
+    "analyze:webtypes": "npx wca-webtypes wca analyze  \"src/components/**/!(*.test|*.style).ts\" --outFile src/manifest/web-types.json --format webtypes",
+    "analyze:open-wc": "npx custom-elements-manifest analyze --litelement --outdir src/manifest/open-wc"
+
+  },
+  "dependencies": {
+    "lit": "^3.3.0",
+    "web-component-analyzer": "^2.0.0",
+    "web-component-analyzer-webtypes": "^2.0.12"
+  },
+  "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.10.4",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  },
+  "web-types": "./manifests/web-types.json",
+  "wca": {
+    "webtypesConfig": {
+      "name": "awc-ui",
+      "framework": "lit"
+    }
+  }
+}

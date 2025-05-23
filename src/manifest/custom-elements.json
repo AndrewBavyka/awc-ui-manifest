@@ -1,0 +1,113 @@
+{
+  "version": "experimental",
+  "modules": [
+    {
+      "path": "./../components/my-element.ts",
+      "exports": [
+        {
+          "kind": "definition",
+          "name": "my-element",
+          "declaration": {
+            "name": "MyElement",
+            "module": "./../components/my-element.ts"
+          }
+        },
+        {
+          "kind": "class",
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "name": "MyElement",
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "privacy": "public",
+              "description": "Вариант кнопки (простой union тип)",
+              "type": "ElementVariantType",
+              "default": "\"primary\""
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "privacy": "public",
+              "description": "Размер элемента (используется enum)",
+              "type": "ElementSizeEnum",
+              "default": "\"medium\""
+            },
+            {
+              "kind": "field",
+              "name": "color",
+              "privacy": "public",
+              "description": "Цвет элемента (тип из массива as const)",
+              "type": "\"blue\" | \"red\" | \"green\" | \"gray\"",
+              "default": "\"blue\""
+            },
+            {
+              "kind": "field",
+              "name": "tags",
+              "privacy": "public",
+              "description": "Список тегов (массив строк)",
+              "type": "string[]",
+              "default": "[]"
+            },
+            {
+              "kind": "field",
+              "name": "config",
+              "privacy": "public",
+              "description": "Конфигурация элемента (объект)",
+              "type": "{ enabled: boolean; level: number; }",
+              "default": "{\"enabled\":true,\"level\":1}"
+            },
+            {
+              "kind": "field",
+              "name": "styles",
+              "privacy": "public",
+              "type": "CSSResult",
+              "default": "\"css`\\n    :host {\\n      display: block;\\n    }\\n  `\""
+            }
+          ],
+          "tagName": "my-element",
+          "attributes": [
+            {
+              "name": "variant",
+              "fieldName": "variant",
+              "defaultValue": "\"primary\"",
+              "description": "Вариант кнопки (простой union тип)",
+              "type": "ElementVariantType"
+            },
+            {
+              "name": "size",
+              "fieldName": "size",
+              "defaultValue": "\"medium\"",
+              "description": "Размер элемента (используется enum)",
+              "type": "ElementSizeEnum"
+            },
+            {
+              "name": "color",
+              "fieldName": "color",
+              "defaultValue": "\"blue\"",
+              "description": "Цвет элемента (тип из массива as const)",
+              "type": "\"blue\" | \"red\" | \"green\" | \"gray\""
+            },
+            {
+              "name": "tags",
+              "fieldName": "tags",
+              "defaultValue": "[]",
+              "description": "Список тегов (массив строк)",
+              "type": "string[]"
+            },
+            {
+              "name": "config",
+              "fieldName": "config",
+              "defaultValue": "{\"enabled\":true,\"level\":1}",
+              "description": "Конфигурация элемента (объект)",
+              "type": "{ enabled: boolean; level: number; }"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

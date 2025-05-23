@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "tags": [
+    {
+      "name": "my-element",
+      "description": "Attributes:\n\n  * `variant` {`ElementVariantType`} - Вариант кнопки (простой union тип)\n\n  * `size` {`ElementSizeEnum`} - Размер элемента (используется enum)\n\n  * `color` {`\"blue\" | \"red\" | \"green\" | \"gray\"`} - Цвет элемента (тип из массива as const)\n\n  * `tags` {`string[]`} - Список тегов (массив строк)\n\n  * `config` {`{ enabled: boolean; level: number; }`} - Конфигурация элемента (объект)\n\nProperties:\n\n  * `variant` {`ElementVariantType`} - Вариант кнопки (простой union тип)\n\n  * `size` {`ElementSizeEnum`} - Размер элемента (используется enum)\n\n  * `color` {`\"blue\" | \"red\" | \"green\" | \"gray\"`} - Цвет элемента (тип из массива as const)\n\n  * `tags` {`string[]`} - Список тегов (массив строк)\n\n  * `config` {`{ enabled: boolean; level: number; }`} - Конфигурация элемента (объект)\n\n  * `styles` {`CSSResult`} - ",
+      "attributes": [
+        {
+          "name": "variant",
+          "description": "`variant` {`ElementVariantType`} - Вариант кнопки (простой union тип)\n\nProperty: variant\n\nDefault: primary",
+          "values": [
+            {
+              "name": "primary"
+            },
+            {
+              "name": "secondary"
+            }
+          ]
+        },
+        {
+          "name": "size",
+          "description": "`size` {`ElementSizeEnum`} - Размер элемента (используется enum)\n\nProperty: size\n\nDefault: medium",
+          "values": [
+            {
+              "name": "small"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "large"
+            }
+          ]
+        },
+        {
+          "name": "color",
+          "description": "`color` {`\"blue\" | \"red\" | \"green\" | \"gray\"`} - Цвет элемента (тип из массива as const)\n\nProperty: color\n\nDefault: blue",
+          "values": [
+            {
+              "name": "blue"
+            },
+            {
+              "name": "red"
+            },
+            {
+              "name": "green"
+            },
+            {
+              "name": "gray"
+            }
+          ]
+        },
+        {
+          "name": "tags",
+          "description": "`tags` {`string[]`} - Список тегов (массив строк)\n\nProperty: tags\n\nDefault: "
+        },
+        {
+          "name": "config",
+          "description": "`config` {`{ enabled: boolean; level: number; }`} - Конфигурация элемента (объект)\n\nProperty: config\n\nDefault: [object Object]"
+        }
+      ]
+    }
+  ],
+  "globalAttributes": [],
+  "valueSets": []
+}
